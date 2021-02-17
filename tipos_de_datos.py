@@ -39,30 +39,36 @@ guardar el resultado en `len_apellido`.
 """
 len_apellido=len(apellido)
 
+
 """Remover los espacios en blanco que hayan en la variable `apellido` y guardar 
 resultado en `apellido2`.
 """
-
+apellido2=apellido.strip()
 
 """Guardar en `apellido_es_mayuscula` si `apellido2` es un string que contiene 
 solo letras mayúsculas.
 """
 
+apellido_es_mayuscula =  apellido2.isupper()
 
 """Convertir la variable `apellido2` de mayúsculas a minúsculas si está en mayúsculas, 
 o de minúsculas a mayúsculas si está en minúsculas y guardarla en `apellido3`.
 """
-
+if apellido_es_mayuscula:
+  apellido3=apellido2.lower()
+else:
+  apellido3=apellido2.upper()
 
 """Crear variable `a_in_apellido` que contenga la cantidad de letras a que contiene 
 la variable `apellido2`.
 """
 
+a_in_apellido=apellido2.count('a')
 
 """Crear variable `apellido_end_ez` que contenga si la variable `apellido2` 
 termina con el string `"ez"`.
 """
-
+apellido_end_ez= apellido2.endswith('ez')
 
 """Crear tupla llamada `apellidos_tuple` que contenga los elementos desde el 49 
 al 23 (en orden invertido), saltandose de a 1 elemento (49, 47, 45 , etc) de la
