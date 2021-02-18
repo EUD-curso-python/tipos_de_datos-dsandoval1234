@@ -131,7 +131,6 @@ apellidos_set1.update(apellidos_list[68:71])
 """
 VarEliminar=" CAMPOS  "
 apellidos_set1.remove(VarEliminar)
-print(apellidos_set1)
 
 """Crear la variable `apellidos_set3` con la intersección entre `apellidos_set1` 
 y `apellidos_set2`.
@@ -162,28 +161,33 @@ var3=apellidos_set3.issubset(apellidos_set1)
 del 0 al 4 de la lista `apellidos_lista`.
 """
 
+apellidos_dict = dict.fromkeys(apellidos_list[0:5])
 
 """Agregar el siguiente diccionario: {"key1": 12, "key2": 24} al diccionario  
 `apellidos_dict`.
 """
 
+DictAux={"key1": 12, "key2": 24}
+apellidos_dict.update(DictAux)
+
 
 """Asignar el valor del entero `34` a la llave "gonzalez" en el diccionario 
 `apellidos_dict`.
 """
+apellidos_dict['gonzalez'] = 34
 
 
 """Sacar el valor de la llave "gonzalez" del diccionario `apellidos_dict` y 
 guardarlo en la variable `apellido_gonzalez`.
 """
-
+apellido_gonzalez=apellidos_dict.pop('gonzalez')
 
 """Eliminar el último elemento del diccionario `apellidos_dict`.
 """
-
+apellidos_dict.popitem()
 
 """Sacar el valor de la llave "no_existe" del diccionario `apellidos_dict` y 
 guardarlo en la variable `apellido_none`.
 """
-
-
+apellido_none=apellidos_dict.get('no_existe')
+print(apellido_none)
